@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+
+    <title>Expense tracker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="spazio"></div>
+        <p class="title">EXPENSE TRACKER</p>
+        <p class="paragraph">Add a new item:</p>
+        <div class="compila-container">
+            <div class="spazio1"></div>
+            <div class="compila">
+                <label for="tipo" style="color: white; font-family: Arial, Helvetica, sans-serif;">Tipo: </label>    
+                <select class="pagamenti" name="pagamenti" id="pagamenti">
+                    <option value="Contanti">Contanti</option>
+                    <option value="Carta di debito">Carta di debito</option>
+                    <option value="Carta di credito">Carta di credito</option>
+                    <option value="Assegno">Assegno</option>
+                </select>
+
+                <span class="span1"></span>
+                
+                <label for="tipo" style="color: white; font-family: Arial, Helvetica, sans-serif;">Nome: </label>    
+                <input type="text" class="prodotto" name="prodotto" id="prodotto" placeholder="Inserisci il nome del prodotto...">
+            </div>
+            <div class="compila">    
+                <label for="tipo" style="color: white; font-family: Arial, Helvetica, sans-serif;">Data: </label>    
+                <input type="date" class="data" name="data" id="data">
+                
+                <span class="span2"></span>
+                
+                <label for="tipo" style="color: white; font-family: Arial, Helvetica, sans-serif;">Prezzo: </label>    
+                <input type="number" class="prezzo" name="prezzo" id="prezzo" placeholder="Inserisci il prezzo...">
+            </div>
+            <button id="aggiungi" class="aggiungi" onclick="aggiungi()">Aggiungi al carrello</button>
+        </div>
+        <p style="margin-top: 30px; text-align: center; font-size: 1.5rem; color: white; text-decoration:underline; font-family:Arial, Helvetica, sans-serif; font-weight:bold;">
+            CARRELLO
+        </p>
+        <table id="tabella">
+            <tr id="tr">
+                <th>Tipo</th>
+                <th>Nome prodotto</th>
+                <th>Data</th>
+                <th>Prezzo</th>
+            </tr>
+        </table>
+
+        <img src="/imgs/elimina.png" alt="" id="elimina" onclick="elimina()">
+        <button class="paga" onclick="acquista()">Acquista</button>
+    </div>
+</body>
+</html>
